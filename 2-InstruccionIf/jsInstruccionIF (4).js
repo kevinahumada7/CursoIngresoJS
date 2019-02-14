@@ -5,11 +5,11 @@ var edad;
 edad= document.getElementById("edad").value;
 if(edad>=13 && edad<=17)
     {
-        alert("Eres un adolecente")
+        alert("Eres un adolecente");
     }
 else
     {
-        alert("Error")
+        alert("Error");
     }
 
 }//FIN DE LA FUNCIÓN

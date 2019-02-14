@@ -5,11 +5,11 @@ var edad;
 edad= document.getElementById("edad").value;
 if(edad>=18)
     {
-        alert("Información")
+        alert("Información");
     }
 else
     {
-        alert("Acceso Denegado")
+        alert("Acceso Denegado");
     }
 
 }//FIN DE LA FUNCIÓN

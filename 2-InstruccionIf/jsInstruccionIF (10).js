@@ -1,7 +1,7 @@
 function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
-	var aleatorio = Math.round(Math.random()*10);
+	var aleatorio = Math.round(Math.random()*10)+1;
 
 		alert("Nota: "+aleatorio);
 		
@@ -20,10 +20,8 @@ function mostrar()
 					alert("Vamos, la proxima se puede")
 				
 				}
-
+				
 			}
-			 
-	}
 
 
 }//FIN DE LA FUNCIÓN

@@ -1,11 +1,15 @@
 function mostrar()
 {
-    var precio, descuento, descuentoEnDinero, precioConDescuento, iva;
-     precio= prompt("Ingrese el precio");
-     descuento= prompt("Ingrese el descuento");
-        descuentoEnDinero= precio*descuento/100;
-        precioConDescuento= precio-descuentoEnDinero;
-        iva= precio*21/100;
-            alert("Dinero a descontar: $"+descuentoEnDinero+"\nPrecio con descuento: $"+precioConDescuento+"\nIVA: $"+iva);
-    document.getElementById("elPrecioFinal").value= precioConDescuento-iva;
+    var numeroDeAmigos, precioComida, precioDividido, propina, precioTotalDividido, iva, precioFinal;
+
+        numeroDeAmigos= prompt("Ingresar numero de amigos");
+        precioComida= prompt("Ingresar precio total");
+
+        precioDividido= precioComida/numeroDeAmigos;
+        propina= precioDividido*0.10;
+        iva= precioComida*0.21;
+        precioTotalDividido=precioDividido+propina+(iva/numeroDeAmigos);
+        precioFinal= precioTotalDividido*numeroDeAmigos;
+
+            alert("El numero de amigos es "+numeroDeAmigos+" y deben pagar $"+precioDividido+" cada uno, y la propina sería de $"+propina+" cada uno.\n En TOTAL cada uno deberia pagar $"+precioTotalDividido+" incluyendo IVA.\n El precio final es $"+precioFinal);
 }

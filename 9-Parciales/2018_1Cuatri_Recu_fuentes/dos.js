@@ -1,7 +1,16 @@
 function mostrar()
 {
-  var nombre, localidad;
-  nombre= document.getElementById("elNombre").value;
-  localidad= document.getElementById("laLocalidad").value;
-  alert("Usted es "+nombre+" y vive en la localidad de "+localidad);
+  var precioCompra, iva, precioDescontado, precioFinal;
+
+    precioCompra= document.getElementById("elNombre").value;
+
+    precioCompra=parseInt(precioCompra);
+    
+    precioDescontado= precioCompra-(precioCompra*10/100);
+    iva= precioCompra*21/100;
+    
+    precioFinal= precioDescontado+iva;
+
+      alert("Tu compra es de $"+precioCompra+", tenes un descuento del 10%, queda en $"+precioDescontado+", mas el iva es $"+precioFinal);
+        
 }

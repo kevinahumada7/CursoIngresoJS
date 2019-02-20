@@ -16,33 +16,56 @@ function CalcularPrecio ()
         cantidadLamparas= document.getElementById("Cantidad").value;
         cantidadLamparas= parseInt(cantidadLamparas);
         marcaLamparas= document.getElementById("Marca").value;
-        precioTotal= 35*cantidadLamparas;
+        precioTotal= precioLampara*cantidadLamparas;
 
         if (cantidadLamparas>=6) {
-            precioFinal= precioTotal-(precioTotal*50/100);
-        }
+                precioFinal= precioTotal-(precioTotal*50/100);
+            }
         
         if (cantidadLamparas==5 && marcaLamparas=="ArgentinaLuz") {
                 precioFinal= precioTotal-(precioTotal*40/100);
             } else {
-                precioFinal= precioTotal-(precioTotal*30/100);
-            }
+                if (cantidadLamparas==5) {
+                    precioFinal= precioTotal-(precioTotal*30/100);
+                }
+        }
         
-        if (cantidadLamparas==4 && marcaLamparas=="ArgentinaLuz" || marcaLamparas=="FelipeLamparas") {
+        if (cantidadLamparas==4 && marcaLamparas=="ArgentinaLuz") {
                 precioFinal= precioTotal-(precioTotal*25/100);
             } else {
-                precioFinal= precioTotal-(precioTotal*20/100);
-            }
-
-        if (cantidadLamparas==3 && marcaLamparas=="ArgentinaLuz") {
+                if (cantidadLamparas==4 && marcaLamparas=="FelipeLamparas") {
+                    precioFinal= precioTotal-(precioTotal*25/100);
+            } else {
+                if (cantidadLamparas==4) {
+                    precioFinal= precioTotal-(precioTotal*20/100);
+                }
+            }  
+        }
+        
+        if (cantidadLamparas==3 && marcaLamparas=="ArgentinaLuz") { 
                 precioFinal= precioTotal-(precioTotal*15/100);
             } else {
-                if (marcaLamparas=="FelipeLamparas") {
-                precioFinal= precioTotal-(precioTotal*10/100);
-                } else {
-                precioFinal= precioTotal-(precioTotal*5/100);
+                if (cantidadLamparas==3 && marcaLamparas=="FelipeLamparas") {
+                    precioFinal= precioTotal-(precioTotal*10/100);
+            } else {
+                if (cantidadLamparas==3) {
+                    precioFinal= precioTotal-(precioTotal*5/100);
                 }
-            }
+            }  
+        }
+
+        if (cantidadLamparas<=2) {
+            precioFinal= precioTotal
+        }
+
+/*        if (precioFinal>=120) {
+            precioFinal= precioTotal+(precioTotal*10/100);
+            alert("IIBB Usted pago $"+precioFinal);
+        }
+*/        
+        
+
+            
 
         
 

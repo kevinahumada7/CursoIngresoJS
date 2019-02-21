@@ -44,6 +44,6 @@ switch(laHora)
         mensaje= "La hora no existe";
     break;
 }
-alert(mensaje)
+alert(mensaje);
 
 }//FIN DE LA FUNCIÓN

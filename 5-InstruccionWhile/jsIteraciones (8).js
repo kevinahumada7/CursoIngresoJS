@@ -1,11 +1,21 @@
 function mostrar()
 {
+	var numeros;
+	var contador;
+	var positivo;
+	var negativo;
+	var respuesta;
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
+	contador=0;
+	positivo=0;
+	negativo=1;
+	respuesta='si';
+
+	while(respuesta!="no")
+	{
+		contador++;
+		respuesta=prompt("desea continuar?");
+	}
 
 
 document.getElementById('suma').value=positivo;

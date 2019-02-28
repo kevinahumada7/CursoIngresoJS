@@ -1,17 +1,37 @@
 function mostrar()
 {
 
-	var contador=0;
-	// declarar variables
+	var contador;
+	var numeroMax;
+	var numeroMin;
+	var respuesta;
+	var numeroIngresado;
+	var bandera;
+		// declarar variables
 	
-	var respuesta='si';
+		contador=0;
+		respuesta='si';
+		numeroMax=-9999;
+		numeroMin=9999;
 
 	while(respuesta!='no')
 	{
-		
-	
-	}
+		numeroIngresado= prompt("Ingrese numero");
+		numeroIngresado= parseInt(numeroIngresado);
 
+		if (numeroIngresado>numeroMax)
+		{
+			numeroMax= numeroIngresado;
+		}
+		if (numeroIngresado<numeroMin)
+		{
+			numeroMin= numeroIngresado;
+		}
+		respuesta= prompt("Desea seguir ingresando numeros? si/no");
+
+	}
+	maximo.value= numeroMax;
+	minimo.value= numeroMin;
 
 
 

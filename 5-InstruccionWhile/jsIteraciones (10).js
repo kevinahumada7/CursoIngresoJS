@@ -41,7 +41,7 @@ function mostrar()
 			promedioNegativos= sumaNegativos/cantidadNegativos;
 
 		}
-		if (numeroIngresado%2==0)
+		if (numeroIngresado%2==0 && numeroIngresado!=0)
 		{
 			cantidadPares++;
 		}

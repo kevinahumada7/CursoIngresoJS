@@ -1,18 +1,56 @@
 function mostrar()
 {
+	var contador;
+	var respuesta;
+	var numeroIngresado;
+	var sumaPositivos;
+	var cantidadPositivos;
+	var sumaNegativos;
+	var cantidadNegativos;
+	var cantidadPares;
+	var promedioPositivos;
+	var promedioNegativos;
 
-	var contador=0;
 	//declarar contadores y variables 
-	
-	var respuesta="si";
+	contador=0;
+	respuesta="si";
+	sumaPositivos=0;
+	cantidadPositivos=0;
+	sumaNegativos=0;
+	cantidadNegativos=0;
+	cantidadPares=0;
+	promedioPositivos=0;
+	promedioNegativos=0;
 
 	while(respuesta!="no")
 	{
-		
-	
+		numeroIngresado= prompt("Ingrese numero");
+		numeroIngresado= parseInt(numeroIngresado);
+
+		if (numeroIngresado>0)
+		{
+			sumaPositivos= sumaPositivos+numeroIngresado;
+			cantidadPositivos++;
+			promedioPositivos= sumaPositivos/cantidadPositivos;
+
+		}
+		if (numeroIngresado<0)
+		{
+			sumaNegativos= sumaNegativos+numeroIngresado;
+			cantidadNegativos++;
+			promedioNegativos= sumaNegativos/cantidadNegativos;
+
+		}
+		if (numeroIngresado%2==0)
+		{
+			cantidadPares++;
+		}
+
+		respuesta= prompt("Desea seguir ingresando numeros? si/no");
 	}
-
-
+console.log("La suma de los negativos es: "+sumaNegativos+"\nLa suma de los positivos es: "+sumaPositivos+"\nCantidad de numeros positivos: "+cantidadPositivos+"\nCantidad de numeros negativos: "+cantidadNegativos+"\nCantidad de numeros pares: "+cantidadPares);
+console.log(promedioNegativos);
+console.log(promedioPositivos);
 
 
 }//FIN DE LA FUNCIÓN

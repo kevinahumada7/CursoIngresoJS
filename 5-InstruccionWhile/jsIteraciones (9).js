@@ -6,7 +6,6 @@ function mostrar()
 	var numeroMin;
 	var respuesta;
 	var numeroIngresado;
-	var bandera;
 		// declarar variables
 	
 		contador=0;

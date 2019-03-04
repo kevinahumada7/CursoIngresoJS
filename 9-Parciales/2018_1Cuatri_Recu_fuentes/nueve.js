@@ -22,7 +22,6 @@ function mostrar()
 
     while(continuar!="no")
     {
-        cantidadPaises++;
         pais= prompt("Ingrese el nombre de un pais:");
         superficieTerritorio= prompt("Ingrese superficie del territorio");
         superficieTerritorio= parseInt(superficieTerritorio);
@@ -69,6 +68,7 @@ function mostrar()
         sumaSuperficie= sumaSuperficie+superficieTerritorio;
         promedioKilometros= sumaSuperficie/cantidadPaises;
         continuar= prompt("Desea continuar");
+        cantidadPaises++;
     }
     console.log("Cantidad de paises con superficie impar: "+cantidadSuperficieImpar);
     console.log("Cantidad de paises con superficie menor a 100 es: "+cantidadPaisesMenorCien);

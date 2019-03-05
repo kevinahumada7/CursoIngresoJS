@@ -1,60 +1,61 @@
 function mostrar()
 {
-    var notas;
+    var nota;
+    var alumnos;
     var sexo;
     var sumaNotas;
-    var cantidadAlumnos;
     var promedioNotas;
-    var cantidadMasculino;
     var notaMasBaja;
-    var sexoNotaBaja;
-
-    notas=0;
+    var sexoMasBaja;
+    var cantidadVarones;
+    
+    alumnos=0;
     sumaNotas=0;
-    promedioNotas=0;
-    cantidadAlumnos=0;
-    cantidadMasculino=0;
-
-    while (cantidadAlumnos<5)
+    notaMasBaja=0;
+    cantidadVarones=0;
+    
+    while (alumnos<5)
     {
-        cantidadAlumnos++;
-        nota=prompt("Ingrese la nota del 0 al 10");
-        nota=parseInt(nota);
+        nota= prompt("Ingresar nota del alumno");
+        nota= parseInt(nota);
         
-        while(nota < 0 || nota > 10)
+        while (nota<0 || nota>10)
         {
-			nota=prompt("error, Reingrese la nota del 0 al 10");
-			nota=parseInt(nota);
+            nota= prompt("Error! Reingrese la nota del alumno");
+            nota= parseInt(nota);
         }
         
-        sexo=prompt("Ingrese f ó m .");
+        sexo= prompt("Ingresar sexo del alumno");
+        
+        while (sexo!="f" && sexo!="m")
+        {
+            sexo= prompt("Error! vuelva a ingresar el sexo del alumno");
+        }
 
-        while(sexo!="f" && sexo!="m")
+        if (alumnos==0)
         {
-            sexo = prompt("Reingrese f ó m .");
-        }
-        
-        if (cantidadAlumnos == 1)
-        {
-			notaMasBaja=nota;
-			sexoNotaBaja=sexo;
+            notaMasBaja= nota;
+            sexoMasBaja= sexo;
+
         }else
         {
-            if ( nota<notaMasBaja) 
+            if (nota<notaMasBaja)
             {
-				notaMasBaja=nota;
-				sexoNotaBaja=sexo;
-			}
-		}
-        if (sexo =="m" && nota>=6)
-        {
-			cantidadMasculino++;
+                notaMasBaja= nota;
+                sexoMasBaja= sexo;
+            }
         }
-        sumaNotas=nota+sumaNotas;
-    }
-    promedioNotas=sumaNotas/cantidadAlumnos;
+        if (sexo=="m" && nota>=6)
+        {
+            cantidadVarones++;
+        }
 
-	alert("El promedio de las notas es "+promedioNotas);
-	alert("la nota mas baja es "+notaMasBaja+" y el sexo es "+sexoNotaBaja);
-	alert("La cantidad de varones con nota mayor a 6 es de "+cantidadMasculino);
+        alumnos++;
+        
+        sumaNotas= sumaNotas+nota;
+        promedioNotas= sumaNotas/alumnos;
+    }
+    alert("La suma de las nota es "+sumaNotas+" y el promedio es: "+promedioNotas);
+    alert("La nota mas baja fue "+notaMasBaja+" y el sexo del alumno es "+sexoMasBaja);
+    alert("La cantidad de varones con nota mayor o igual a seis es: "+cantidadVarones);
 }
